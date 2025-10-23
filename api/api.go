@@ -107,7 +107,7 @@ func (a *Api[T]) Do(b *Bot) (*T, error) {
 		if err != nil {
 			return nil, err
 		}
-		fmt.Println(fmt.Sprintf("响应体：%s", string(respBody)))
+		fmt.Printf("响应体：%s\n", string(respBody))
 		resp.Body = io.NopCloser(bytes.NewReader(respBody))
 	}
 	//检查状态码是否为2xx
